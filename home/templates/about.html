@@ -1,5 +1,91 @@
-{% extends 'base.html' %} {% block content %}
-<div>
-  <p>This is about.html</p>
-</div>
+{% extends 'base.html' %} {% block title %}
+<title>Qingying Meng | About</title>
+{% endblock title %} {% block content %}
+
+<section class="mb-3">
+  <!--Section heading-->
+  <h3
+    class="h1-responsive font-weight-bold text-left my-4"
+    style="color: #0dcaf0"
+  >
+    Me at a glance ...
+  </h3>
+  <div class="row">
+    <div class="card" style="width: 33%">
+      <img
+        src="https://source.unsplash.com/500x300/?coding"
+        class="card-img-top"
+        alt="major in Physics"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Present</h5>
+        <p class="card-text">
+          I have over two years' experience as a software engineer. In the past
+          12 months, I've completed 30 projects using .... and assisted with
+          developing ... for ...
+        </p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Item 1</li>
+        <li class="list-group-item">Item 2</li>
+        <li class="list-group-item">Item 3</li>
+      </ul>
+      <div class="card-body">
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 33%">
+      <img
+        src="https://source.unsplash.com/500x300/?data scientist"
+        class="card-img-top"
+        alt="major in Physics"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Past</h5>
+        <p class="card-text">
+          I received my higher degrees in Physics that not only honed my
+          programming skills in SAS, Matlab, and Mathematica, but also shape my
+          personality for collaboration with people from different backgrounds.
+        </p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Item 1</li>
+        <li class="list-group-item">Item 2</li>
+        <li class="list-group-item">Item 3</li>
+      </ul>
+      <div class="card-body">
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 33%">
+      <img
+        src="https://source.unsplash.com/500x300/?collaboration"
+        class="card-img-top"
+        alt="major in Physics"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Future</h5>
+        <p class="card-text">
+          I worked full time creating various full-stack applications using
+          agile methodologies. Now that I have the discipline, knowledge, and
+          autonomy to make my way through this field.
+        </p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Item 1</li>
+        <li class="list-group-item">Item 2</li>
+        <li class="list-group-item">Item 3</li>
+      </ul>
+      <div class="card-body">
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 {% endblock content %}
