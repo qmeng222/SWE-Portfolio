@@ -42,6 +42,6 @@ def contact(request):
     return render(request, 'contact.html')
 
 
-def blogs(request):
-    # return  HttpResponse('This is the blogs page (blogs/)')
-    return render(request, 'blogs.html')
+def blog(request):
+    # return  HttpResponse('This is the blog page (blog/)')
+    return render(request, 'blog.html')
