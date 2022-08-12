@@ -18,16 +18,24 @@
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
+    <!-- <title>{% block title1 %} {% endblock title1 %}</title> -->
     {% block title %} {% endblock title %}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
   </head>
-  <body class="px-3 py-0 m-0 border-0 bd-example">
+  <body class="px-0 py-0 m-0 border-0 bd-example">
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="http://127.0.0.1:8000/about/">
+          <!-- <a class="navbar-brand" href="http://127.0.0.1:8000/about/">
             Qingying
-          </a>
+          </a> -->
+
+          <img
+            src="{% static 'img/myHeadshot.png' %}"
+            alt="headshot"
+            width="39"
+            height="39"
+          />
 
           <button
             class="navbar-toggler"
@@ -44,7 +52,7 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a
-                  class="nav-link active"
+                  class="nav-link {% block homeActive %} {% endblock homeActive %}"
                   aria-current="page"
                   href="http://127.0.0.1:8000/"
                   >Home
@@ -52,26 +60,32 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="http://127.0.0.1:8000/about/">
+                <a
+                  class="nav-link {% block aboutActive %} {% endblock aboutActive %}"
+                  href="http://127.0.0.1:8000/about/"
+                >
                   About
                 </a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="http://127.0.0.1:8000/projects/">
+                <a
+                  class="nav-link {% block projectsActive %} {% endblock projectsActive %}"
+                  href="http://127.0.0.1:8000/projects/"
+                >
                   Projects
                 </a>
               </li>
 
               <li class="nav-item dropdown">
                 <a
-                  class="nav-link dropdown-toggle"
+                  class="nav-link dropdown-toggle {% block demosActive %} {% endblock demosActive %}"
                   href="#"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Demo
+                  Demos
                 </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="#">Project Alpha</a></li>
@@ -87,19 +101,29 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="http://127.0.0.1:8000/skills/">
+                <a
+                  class="nav-link {% block skillsActive %} {% endblock skillsActive %}"
+                  href="http://127.0.0.1:8000/skills/"
+                >
                   Skills
                 </a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="http://127.0.0.1:8000/contact/">
+                <a
+                  class="nav-link {% block contactActive %} {% endblock contactActive %}"
+                  href="http://127.0.0.1:8000/contact/"
+                >
                   Contact
                 </a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link disabled">Blogs</a>
+                <a
+                  class="nav-link {% block blogsActive %} {% endblock blogsActive %}"
+                  href="http://127.0.0.1:8000/blogs/"
+                  >Blogs</a
+                >
               </li>
             </ul>
             <form class="d-flex" role="search">
@@ -118,7 +142,7 @@
     <main>{% block content %} {% endblock content %}</main>
   </body>
   <br />
-  <footer class="bg-dark text-light text-center py-6 position-relative">
+  <footer class="bg-dark text-light text-center fixed-bottom">
     © 2022 Copyright: Qingying Meng | All rights reserved
   </footer>
 </html>

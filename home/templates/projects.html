@@ -1,17 +1,21 @@
+<!-- must be the first tag  in the template: -->
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
 <title>Qingying Meng | Projects</title>
 {% endblock title %}
 
+{% block projectsActive %}active{% endblock projectsActive %}
+
 {% block content %}
-<section class="mb-3">
+<section class="px-3">
   <!--Section heading-->
   <h3
     class="h1-responsive font-weight-bold text-left my-4"
     style="color: #0dcaf0"
   >
-    Projects
+    My Projects
   </h3>
 
   <ul class="list-unstyled">
