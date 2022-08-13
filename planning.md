@@ -14,7 +14,7 @@
 ## Install dependencies:
 
 - [x] create new project on GitLab, then clone this repo to local:
-      git clone https://gitlab.com/qmeng222/developer-portfolio-website.git
+      git clone https://gitlab.com/qmeng222/swe-portfolio.git
 - [x] create a new virtual environment in the repository directory for the project: python -m venv .venv
 - [x] activate the virtual environment: source .venv/bin/activate
 - [x] upgrade pip: python -m pip install --upgrade pip
@@ -57,11 +57,13 @@
 
 ---
 
-# MVT for each app:
+# Workflow for each app: urls --> views --> models || templates
 
-Urls --> Views --> Models || Templates
-
-1. M: edit models.py and migrate
-2. V: edit views.py
+1. Models:
+   - create model(s) at models.py
+   - register model(s) at admin.py
+   - migrate
+2. Views:
+   - create view(s) at app_views.py
 3. register the views: project > url.py, app > urls.py
 4. T: create template(s) at app > templates

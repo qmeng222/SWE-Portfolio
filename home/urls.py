@@ -10,7 +10,6 @@ admin.site.index_title= "Welcome to Qingying's Portal!"  # login greeting
 urlpatterns = [
     path('', views.home, name='home'),
     path('about/', views.about, name='about'),
-    path('projects/', views.projects, name='projects'),
     path('demos/', views.demos, name='demos'),
     path('skills/', views.skills, name='skills'),
     path('contact/', views.contact, name='contact'),
