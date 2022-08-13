@@ -1,42 +1,32 @@
-{% extends 'base.html' %} {% load markdownify %} {% block content %}
-<div>
-  <h1>{{ project.name }}</h1>
-  {{ project.description|markdownify }}
-  <h2>Tasks</h2>
-  <p>
-    <!-- refer to the tasks > urls.py for the url path -->
-    <a href="{% url 'create_task' %}">Create a new task</a>
-  </p>
+{% extends 'base.html' %}
+<!-- load markdownify -->
+<!-- {% load markdownify %} -->
 
-  {% if project.tasks.all|length != 0 %}
-  <table>
-    <thead>
-      <th>Name</th>
-      <th>Assignee</th>
-      <th>Start date</th>
-      <th>Due date</th>
-      <th>Is completed</th>
-    </thead>
-    <tbody>
-      {% for task in project.tasks.all %}
+<!-- block content -->
+{% block content %}
+<section class="px-3">
+  <h3
+    class="h1-responsive font-weight-bold text-left my-4"
+    style="color: #0dcaf0"
+  >
+    {{ project.title }}
+  </h3>
+
+  <div>
+    <table>
       <tr>
-        <td>{{ task.name }}</td>
-        <td>{{ task.assignee }}</td>
-        <td>{{ task.start_date }}</td>
-        <td>{{ task.due_date }}</td>
-        {% if task.is_completed == True %}
-        <td>yes</td>
-        {% else %}
-        <td>no</td>
-        {% endif %}
+        <th>Projct</th>
+        <td>{{ project.title }}</td>
       </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-
-  {% else %}
-  <p>This project has no tasks</p>
-
-  {% endif %}
-</div>
-{% endblock content %}
+      <tr>
+        <th>Technologies</th>
+        <td>{{ project.technologies}}</td>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td>{{ project.description }}</td>
+      </tr>
+    </table>
+  </div>
+  {% endblock content %}
+</section>

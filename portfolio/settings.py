@@ -28,10 +28,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+MARKDOWNIFY = {"default": {"BLEACH": False}}
 
 # Application definition
 
 INSTALLED_APPS = [
+    "markdownify.apps.MarkdownifyConfig",
     'home.apps.HomeConfig',
     'projects.apps.ProjectsConfig',
     'django.contrib.admin',

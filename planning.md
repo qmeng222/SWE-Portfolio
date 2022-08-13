@@ -30,6 +30,27 @@
 
 ---
 
+## Feature 18: markdownify
+
+- [x] install Django Markdownify: pip install django-markdownify
+- [x] portfolio > settings.py:
+
+      MARKDOWNIFY = {
+      "default": {
+      "BLEACH": False
+      }
+      }
+
+      INSTALLED_APPS = [
+      "markdownify.apps.MarkdownifyConfig",
+      ...
+      ]
+
+- [x] use pip freeze to update requirements.txt file: pip freeze > requirements.txt
+  - [x] Markdown==3.4.1 will be listed after the update
+
+---
+
 # Structures:
 
 - project: portfolio

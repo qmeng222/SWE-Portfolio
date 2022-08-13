@@ -9,7 +9,7 @@ from django.urls.base import reverse_lazy
 class ProjectCreateView(LoginRequiredMixin, CreateView):
     model = Project
     template_name = "create.html"
-    fields = ["title", "description", "technology", "members", "image"]
+    fields = ["title", "description", "technologies", "members", "image"]
 
     def get_success_url(self):
         return reverse_lazy("show_project", args=[self.object.id])
