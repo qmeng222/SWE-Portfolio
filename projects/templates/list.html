@@ -24,13 +24,15 @@
 
   <div>
     <p>
-      <a href="{% url 'create_project' %}"> Create a new project </a>
+      <button class="btn btn-secondary my-3" href="{% url 'create_project' %}">
+        Create a new project
+      </button>
     </p>
   </div>
 
   {% if project_list %}
-
   <ul class="list-unstyled">
+    {% for project in project_list %}
     <li class="media">
       <img
         class="mr-3"
@@ -45,34 +47,7 @@
         Donec lacinia congue felis in faucibus.
       </div>
     </li>
-    <li class="media my-4">
-      <img
-        class="mr-3"
-        src="https://source.unsplash.com/100x100/?twitter"
-        alt="Generic placeholder image"
-      />
-      <div class="media-body">
-        <h5 class="mt-0 mb-1">Project Beta</h5>
-        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
-        ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus
-        viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla.
-        Donec lacinia congue felis in faucibus.
-      </div>
-    </li>
-    <li class="media">
-      <img
-        class="mr-3"
-        src="https://source.unsplash.com/100x100/?maps"
-        alt="Generic placeholder image"
-      />
-      <div class="media-body">
-        <h5 class="mt-0 mb-1">Project Gamma</h5>
-        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
-        ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus
-        viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla.
-        Donec lacinia congue felis in faucibus.
-      </div>
-    </li>
+    {% endfor %}
   </ul>
   {% else %}
   <p>You are not assigned to any projects. Please create a new project.</p>
